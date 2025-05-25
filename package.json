@@ -8,6 +8,9 @@
     "build": "parcel build index.html",
     "test": "jest"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hcharshal31/Namaste-React.git"
