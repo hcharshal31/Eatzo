@@ -4,7 +4,7 @@
   "description": "Understanding how the npm works and what is the package.json",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url ./",
+    "build": "PARCEL_NO_RUST=1 parcel build index.html --public-url ./",
     "test": "jest"
   },
   "targets": {
