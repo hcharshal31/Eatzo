@@ -2,11 +2,15 @@
   "name": "npm-understanding",
   "version": "1.0.0",
   "description": "Understanding how the npm works and what is the package.json",
-  "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --public-url ./",
     "test": "jest"
+  },
+  "targets": {
+    "default": {
+      "context": "browser"
+    }
   },
   "engines": {
     "node": "18.x"
