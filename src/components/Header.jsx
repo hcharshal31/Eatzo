@@ -17,7 +17,7 @@ const Header = () => {
           id="logo"
           alt="Food App Logo"
           src={eatzoLogo}
-          className="w-60"
+          className="w-28 pl-5"
         />
       </Link>
       <ul className="flex justify-between w-1/2">
