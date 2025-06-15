@@ -51,7 +51,7 @@ const Header = () => {
         </li> */}
         <li>
           <button
-            className="login bg-blue-500 w-20 text-white border-0 h-8 rounded-md"
+            className="login bg-blue-500 w-20 text-white border-0 h-8 rounded-md hover:cursor-pointer"
             onClick={() => {
               btnValue === "Login"
                 ? setBtnValue("Logout")

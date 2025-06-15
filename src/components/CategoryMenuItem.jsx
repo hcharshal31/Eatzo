@@ -36,8 +36,7 @@ const CategoryMenuItem = ({data})=>{
                 </div>
             )
         )
-    )
-    
+    )   
 }
 
 export default CategoryMenuItem;

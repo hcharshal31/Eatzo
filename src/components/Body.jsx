@@ -2,8 +2,8 @@ import Card, {recCard} from "./Card";
 import { useState, useEffect, useContext } from "react";
 import { apiData } from "../utils/mockData";
 import { Link } from "react-router-dom";
-import Cors from "./Cors"
 import UserContext from "../utils/UserContext";
+import Shimmer from "./Shimmer";
 
 
 const Body = () => {
@@ -28,8 +28,7 @@ const Body = () => {
   }, []);
 
   if (restaurantsList.length === 0){
-    // return <Shimmer />;
-    return <Cors />
+    return <Shimmer />;
   }
 
   const setUser = () => {
@@ -39,9 +38,9 @@ const Body = () => {
   const RecRest = recCard(Card);
 
   return (
-    <div className="body bg-[#FFF8E1] px-10 pb-8 pt-30">
+    <div className="body bg-[#FFF8E1] pb-8 pt-30 px-10 flex flex-col items-center">
       <h3 className="text-2xl font-serif italic pt-5">Hello { loggedInUser }! Enjoy your meal...</h3>
-      <div className="search-filter flex items-center h-25">
+      <div className="search-filter w-full flex items-center justify-between h-25">
         <div id="search-bar">
           {/* Search bar */}
           <input
@@ -57,7 +56,7 @@ const Body = () => {
           {/* This will filter the restaurants based on the reviews (greater than 4)*/}
           <button
             id="search"
-            className="mr-10 bg-blue-500 w-30 h-10 rounded-md text-white"
+            className="mr-10 bg-blue-500 w-30 h-10 rounded-md text-white hover:cursor-pointer"
             onClick={
               (ev) => {
                 const filtered = restaurantsList.filter((item) =>
@@ -73,7 +72,7 @@ const Body = () => {
           </button>
         </div>
         <button
-          className="filter-review mr-10 bg-blue-500 w-40 h-10 rounded-md text-white"
+          className="filter-review bg-blue-500 w-40 h-10 rounded-md text-white hover:cursor-pointer"
           onClick={() => {
             const filteredrestaurantsList = restaurantsList.filter((item) => item?.info?.avgRating > 4.5);
             setSearchList(filteredrestaurantsList);
@@ -82,7 +81,7 @@ const Body = () => {
           Recommended
         </button>
       </div>
-      <div className="card-container flex flex-wrap gap-8">
+      <div className="card-container flex flex-wrap gap-8 justify-start">
         {searchList.map((item) => (
           <Link key={item.info.id} to={`restaurant/${item?.info?.id}`}>
             {item?.info?.avgRating >= 4.5 ? <RecRest resData={item.info} /> : <Card resData={item.info} />}

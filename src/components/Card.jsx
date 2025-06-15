@@ -10,9 +10,9 @@ const Card = (props) => {
     return (
     <div className="card flex bg-amber-200 w-50 justify-between flex-col p-2 rounded-md items-center align- h-60">
         <img src={initialPath + cloudinaryImageId} alt="Food image" className="card-img w-45 h-30 rounded-md object-cover" />
-        <p className="w-[100%]">{cuisines[0]}</p>
+        <p className="w-full md:text-sm">{cuisines[0]}</p>
         <p className="resName w-[100%]">{resNameCut}</p>
-        <p className="w-[100%]">{avgRating}</p>
+        <p className="w-full">{avgRating}</p>
     </div>
     );
 }
