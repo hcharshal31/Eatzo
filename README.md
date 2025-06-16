@@ -24,16 +24,16 @@
 
 # Installation
 1. Follow these steps to get the app running locally:
-   git clone https://github.com/hcharshal31/Eatzo.git
+   "git clone https://github.com/hcharshal31/Eatzo.git"
    
 2. Navigate to the project folder
-   cd Eatzo
+   "cd Eatzo"
 
 3. Install dependencies
-   npm install
+   "npm install"
 
 4. Start the development server
-   npm start
+   "npm start"
 
 # Contact
   Feel free to reach out
